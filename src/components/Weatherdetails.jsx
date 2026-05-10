@@ -1,7 +1,7 @@
 import { getWindDirection } from "../api/weather";
 import "../styles/WeatherDetails.css";
 
-export default function WeatherDetails({ weather }) {
+const WeatherDetails = ({ weather }) => {
   const {
     main: { humidity, pressure },
     wind: { speed, deg },
@@ -65,3 +65,5 @@ export default function WeatherDetails({ weather }) {
     </div>
   );
 }
+
+export default WeatherDetails;

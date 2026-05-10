@@ -28,7 +28,7 @@ function TempBar({ min, max, globalMin, globalMax }) {
   );
 }
 
-export default function Forecast({ forecastData }) {
+const Forecast = ({ forecastData }) =>{
   const grouped = useMemo(
     () => groupForecastByDay(forecastData.list),
     [forecastData]
@@ -143,3 +143,4 @@ export default function Forecast({ forecastData }) {
     </div>
   );
 }
+export default Forecast;

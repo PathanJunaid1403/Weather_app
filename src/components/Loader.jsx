@@ -1,6 +1,6 @@
 import "../styles/Loader.css";
 
-export default function Loader() {
+const Loader = () => {
   return (
     <div className="loader-container">
       <div className="loader-orb">
@@ -13,3 +13,5 @@ export default function Loader() {
     </div>
   );
 }
+
+export default Loader;

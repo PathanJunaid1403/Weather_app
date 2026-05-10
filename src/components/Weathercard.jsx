@@ -1,7 +1,7 @@
 import { getWeatherIconUrl, formatTime } from "../api/weather";
 import "../styles/WeatherCard.css";
 
-export default function WeatherCard({ weather }) {
+const WeatherCard = ({ weather }) => {
   const {
     name,
     sys: { country, sunrise, sunset },
@@ -62,3 +62,5 @@ export default function WeatherCard({ weather }) {
     </div>
   );
 }
+
+export default WeatherCard;

@@ -1,6 +1,6 @@
 import "../styles/ErrorMessage.css";
 
-export default function ErrorMessage({ message }) {
+const ErrorMessage = ({ message }) => {
   return (
     <div className="error-container">
       <div className="error-icon">⚠️</div>
@@ -9,3 +9,5 @@ export default function ErrorMessage({ message }) {
     </div>
   );
 }
+
+export default ErrorMessage;

@@ -14,7 +14,7 @@ function saveHistory(history) {
   localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
 }
 
-export default function SearchBar({ onSearch, isLoading }) {
+const SearchBar = ({ onSearch, isLoading }) => {
   const [query, setQuery]           = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [history, setHistory]       = useState(loadHistory);
@@ -295,3 +295,5 @@ export default function SearchBar({ onSearch, isLoading }) {
     </div>
   );
 }
+
+export default SearchBar;

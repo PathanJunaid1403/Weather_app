@@ -15,7 +15,7 @@ const features = [
   { icon: "🌡️", text: "Metric units" },
 ];
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -76,3 +76,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

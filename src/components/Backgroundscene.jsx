@@ -58,7 +58,7 @@ const CONDITION_PARTICLES = {
   Haze:         ["🌫", "🌁", "🌫", "🌫", "🌁"],
 };
 
-export default function BackgroundScene({ condition, tempTier }) {
+const BackgroundScene = ({ condition, tempTier }) => {
   const scene = TEMP_SCENES[tempTier] || TEMP_SCENES.mild;
   const particles = CONDITION_PARTICLES[condition] || CONDITION_PARTICLES.Clear;
 
@@ -83,3 +83,5 @@ export default function BackgroundScene({ condition, tempTier }) {
     </div>
   );
 }
+
+export default BackgroundScene;
