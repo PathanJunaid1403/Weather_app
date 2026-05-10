@@ -1,0 +1,91 @@
+.bg-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  transition: background 1.8s ease;
+  overflow: hidden;
+}
+
+/* Temperature tier badge — top right corner */
+.temp-tier-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid;
+  font-family: "Syne", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.6s ease;
+  z-index: 5;
+}
+
+.tier-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  transition: background 1.8s ease;
+}
+
+.bg-particle {
+  position: absolute;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  opacity: 0;
+  animation: float 8s ease-in-out infinite;
+  user-select: none;
+  pointer-events: none;
+  filter: blur(0.5px);
+}
+
+.particle-1 { top: 10%; left: 8%;  animation-delay: 0s;   animation-duration: 9s; }
+.particle-2 { top: 20%; right: 12%; animation-delay: 1.8s; animation-duration: 11s; }
+.particle-3 { top: 60%; left: 6%;  animation-delay: 3.2s; animation-duration: 8s; }
+.particle-4 { bottom: 15%; right: 8%;  animation-delay: 0.9s; animation-duration: 12s; }
+.particle-5 { bottom: 30%; left: 20%; animation-delay: 5s;   animation-duration: 10s; }
+
+@keyframes float {
+  0%   { opacity: 0;    transform: translateY(0) scale(0.8) rotate(-5deg); }
+  20%  { opacity: 0.35; }
+  50%  { opacity: 0.2;  transform: translateY(-30px) scale(1.05) rotate(5deg); }
+  80%  { opacity: 0.3; }
+  100% { opacity: 0;    transform: translateY(-60px) scale(0.9) rotate(-3deg); }
+}
+
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.glow-1 {
+  width: 500px; height: 500px;
+  top: -100px; right: -100px;
+  background: radial-gradient(circle, rgba(97,184,245,0.12) 0%, transparent 70%);
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.glow-2 {
+  width: 400px; height: 400px;
+  bottom: -80px; left: -80px;
+  background: radial-gradient(circle, rgba(245,160,48,0.1) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50%       { transform: scale(1.15); opacity: 1; }
+}

@@ -1,0 +1,34 @@
+/* ---- ErrorMessage ---- */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 32px 40px;
+  background: rgba(240,80,60,0.08);
+  border: 1px solid rgba(240,80,60,0.22);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-8px); }
+  60%      { transform: translateX(8px); }
+}
+
+.error-icon { font-size: 2rem; }
+
+.error-message {
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f08070;
+}
+
+.error-hint {
+  font-size: 0.85rem;
+  color: rgba(200,215,240,0.5);
+}
