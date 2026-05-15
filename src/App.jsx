@@ -9,7 +9,7 @@ import Loader from "./components/Loader";
 import BackgroundScene from "./components/BackgroundScene";
 import { fetchWeatherByCity, fetchWeatherByCoords, fetchForecastByCity, fetchForecastByCoords, getTemperatureTier } from "./api/weather";
 import "./App.css";
-
+// App.jsx - Main application component for Nimbus Weather App
 export default function App() {
   const [weather, setWeather]     = useState(null);
   const [forecast, setForecast]   = useState(null);
